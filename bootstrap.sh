@@ -4,6 +4,7 @@ TYPO3_SRC=typo3.tar.gz
 TYPO3_DIR=/usr/local/share/typo3
 TYPO3_WWW=/var/www
 
+export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y apache2 mysql-server-5.5 libapache2-mod-php5 php5-curl php5-gd php5-imagick php5-mysql
 
