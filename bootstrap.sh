@@ -24,5 +24,6 @@ tar zxf "${TYPO3_SRC}" --strip-components 1 -C "${TYPO3_WWW}"
 #ln -s /var/www/typo3_src/typo3 /var/www/typo3
 #ln -s /var/www/typo3_src/index.php /var/www/index.php
 
+touch "${TYPO3_WWW}/typo3conf/ENABLE_INSTALL_TOOL"
 chown -Rfh www-data:www-data "${TYPO3_WWW}/fileadmin" "${TYPO3_WWW}/typo3temp" "${TYPO3_WWW}/typo3conf" "${TYPO3_WWW}/uploads"
 
