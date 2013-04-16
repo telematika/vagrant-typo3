@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y apache2 mysql-server-5.5 libapache2-mod-php5 php5-curl php5-gd php5-imagick php5-mysql
 
-wget http://get.typo3.org/blank -O "${TYPO3_SRC}"
+wget --quiet http://get.typo3.org/blank -O "${TYPO3_SRC}"
 tar zxf "${TYPO3_SRC}" --strip-components 1 -C "${TYPO3_WWW}"
 
 #mkdir -p "${TYPO3_DIR}"
