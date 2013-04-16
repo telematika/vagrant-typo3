@@ -6,5 +6,5 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.provision :shell, :path => "bootstrap.sh"
-  #config.vm.synced_folder "src/", "/var/www"
+  config.vm.synced_folder "src/fileadmin", "/var/www/fileadmin"
 end
