@@ -5,7 +5,6 @@ Vagrant.configure("2") do |config|
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :forwarded_port, guest: 80, host: 8080
-  #config.vm.provision :shell, :path => "bootstrap.sh"
   config.vm.synced_folder "src/fileadmin", "/var/www/fileadmin"
   config.vm.provision :chef_solo do |chef|
     chef.json = {
@@ -27,4 +26,5 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "php"
     chef.add_recipe "vim"
   end
+  config.vm.provision :shell, :path => "bootstrap-typo3.sh"
 end
