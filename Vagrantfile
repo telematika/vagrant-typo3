@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "php"
     chef.add_recipe "php-modules"
     chef.add_recipe "vim"
-    chef.add_recipe "dist-upgrade"
+    #chef.add_recipe "dist-upgrade"
   end
   config.vm.provision :shell, :path => "bootstrap-typo3.sh"
 end
