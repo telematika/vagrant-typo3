@@ -4,6 +4,10 @@
 
 execute "apt-get update"
 
+package "imagemagick" do
+  action :install
+end
+
 package "php5-curl" do
   action :install
 end
@@ -21,6 +25,10 @@ package "php5-mcrypt" do
 end
 
 package "php5-mysql" do
+  action :install
+end
+
+package "php5-suhosin" do
   action :install
 end
 
