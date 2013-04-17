@@ -16,4 +16,6 @@ if [[ ! -f "${TYPO3_WWW}/index.php" ]]; then
   echo "Setting file system permissions..."
   chown -Rfh www-data:www-data "${TYPO3_WWW}/fileadmin" "${TYPO3_WWW}/typo3temp" "${TYPO3_WWW}/typo3conf" "${TYPO3_WWW}/uploads"
   echo "Done."
+else
+  echo "${TYPO3_WWW}/index.php exists, skipping typo3 installation."
 fi
