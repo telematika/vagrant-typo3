@@ -3,5 +3,5 @@
 # Distribution aktualisieren.
 
 execute "apt-get update"
-execute "apt-get dist-upgrade"
+execute "apt-get dist-upgrade -y"
 
