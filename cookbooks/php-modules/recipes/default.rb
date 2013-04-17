@@ -35,3 +35,7 @@ end
 package "php5-xdebug" do
   action :install
 end
+
+package "sendmail" do
+  action :install
+end
