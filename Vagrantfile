@@ -17,13 +17,6 @@ Vagrant.configure("2") do |config|
         "server_repl_password" => "password",
         "server_debian_password" =>"password",
       },
-      "php" => {
-        "directives" => {
-          "memory_limit" => "512M",
-          "post_max_size" => "256M",
-          "upload_max_filesize" => "256M",
-        },
-      },
     }
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "apt"
@@ -35,7 +28,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "php"
     chef.add_recipe "php-modules"
     chef.add_recipe "vim"
-    #chef.add_recipe "dist-upgrade"
   end
   config.vm.provision :shell, :path => "bootstrap-typo3.sh"
 end

@@ -21,7 +21,11 @@
 lib_dir = kernel['machine'] =~ /x86_64/ ? 'lib64' : 'lib'
 
 default['php']['install_method'] = 'package'
-default['php']['directives'] = {}
+default['php']['directives'] = {
+  "memory_limit" => "512M",
+  "post_max_size" => "256M",
+  "upload_max_filesize" => "256M",
+}
 
 case node["platform_family"]
 when "rhel", "fedora"
