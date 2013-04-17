@@ -15,3 +15,8 @@ The /var/www/fileadmin folder is synchronized to src/fileadmin.
 * [Vagrant](http://www.vagrantup.com)
 * [chef](http://www.opscode.com/chef/)
 
+## Usage
+
+1. check out this repository
+2. run `vagrant up`
+
