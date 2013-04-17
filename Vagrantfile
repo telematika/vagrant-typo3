@@ -16,7 +16,14 @@ Vagrant.configure("2") do |config|
         "server_root_password" => "password",
         "server_repl_password" => "password",
         "server_debian_password" =>"password",
-      }
+      },
+      "php" => {
+        "directives" => {
+          "memory_limit" => "512M",
+          "post_max_size" => "256M",
+          "upload_max_filesize" => "256M",
+        },
+      },
     }
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "apt"
