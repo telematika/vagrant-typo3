@@ -8,14 +8,14 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "src/fileadmin", "/var/www/fileadmin"
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      "apache" => {
-        "default_site_enabled" => true,
-        "default_modules" => ["mod_deflate", "mod_headers", "mod_php5", "mod_rewrite"],
+      apache: => {
+        default_site_enabled: => true,
+        default_modules: => ["mod_deflate", "mod_headers", "mod_php5", "mod_rewrite"],
       },
-      "mysql" => {
-        "server_root_password" => "password",
-        "server_repl_password" => "password",
-        "server_debian_password" =>"password",
+      mysql: => {
+        server_root_password: => "password",
+        server_repl_password: => "password",
+        server_debian_password: =>"password",
       },
     }
     chef.cookbooks_path = "cookbooks"
